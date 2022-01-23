@@ -23,9 +23,6 @@ Feature: BBC
       | homePage            | newsSection |
       | https://www.bbc.com | 1           |
 
-  Scenario: dss
-    Given User opens Home page
-
   Scenario Outline: Check that headline are correct
     Given User opens "<homePage>" page
     And User clicks on <newsSection> section button
