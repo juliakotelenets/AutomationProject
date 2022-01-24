@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 public class SearchResultsTests extends BaseTest {
 
-    private static int INDEX_OF_SECTION = 0;
-    private static int INDEX_OF_HEADLINE = 0;
-    private static int INDEX_OF_NEWS_SECTION = 1;
+    private static final int INDEX_OF_SECTION = 0;
+    private static final int INDEX_OF_HEADLINE = 0;
+    private static final int INDEX_OF_NEWS_SECTION = 1;
 
     @Test
     public void checkThatHeadlineAreCorrect(){
