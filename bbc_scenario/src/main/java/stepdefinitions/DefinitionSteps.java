@@ -115,25 +115,25 @@ public class DefinitionSteps {
 
     @And("User fills the questions field with {string}")
     public void userFillsQuestionsField(String questions){
-        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getQuestionInput());
+        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getQuestionField());
         newsCoronavirusPage.fillQuestionField(questions);
     }
 
     @And("User fills the name field with {string}")
     public void userFillsNameField(String name){
-        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getNameInput());
+        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getNameField());
         newsCoronavirusPage.fillNameField(name);
     }
 
     @And("User fills the email field with {string}")
     public void userFillsEmailField(String email){
-        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getEmailInput());
+        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getEmailField());
         newsCoronavirusPage.fillEmailField(email);
     }
 
     @And("User fills the phone number field with {string}")
     public void userFillsPhoneNumberField(String number){
-        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getNumberInput());
+        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getPhoneNumberField());
         newsCoronavirusPage.fillNumberField(number);
     }
 
@@ -185,7 +185,7 @@ public class DefinitionSteps {
 
     @And("User finds the {string}")
     public void userFindsTheChampionship(String championship){
-        sportFootballPage.waitVisibilityOfElement(sportFootballPage.getSearchInput());
+        sportFootballPage.waitVisibilityOfElement(sportFootballPage.getSearchField());
         sportFootballPage.fillSearchInputByChampionship(championship);
     }
 
