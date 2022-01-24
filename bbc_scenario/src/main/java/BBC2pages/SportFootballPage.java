@@ -14,7 +14,7 @@ public class SportFootballPage extends BasePage {
     public SportFootballPage(WebDriver driver) { super(driver); }
 
     @FindBy(xpath = "//input[@name='search']")
-    private WebElement searchInput;
+    private WebElement searchField;
 
     @FindBy(xpath = "//li[contains(@class,'list')]//div[contains(@class,'fixture')]")
     private List<WebElement> listOfTeams;
@@ -29,9 +29,9 @@ public class SportFootballPage extends BasePage {
 
     public void clickOnFootballSectionsButtonByIndex(int index){getFootballSectionsButtonByIndex(index).click();}
 
-    public void fillSearchInputByChampionship(String championship){ searchInput.sendKeys(championship, Keys.ARROW_DOWN, Keys.ENTER); }
+    public void fillSearchInputByChampionship(String championship){ searchField.sendKeys(championship, Keys.ARROW_DOWN, Keys.ENTER); }
 
-    public WebElement getSearchInput(){return searchInput;}
+    public WebElement getSearchField(){return searchField;}
 
     public List<WebElement> getListOfTeams(){return listOfTeams;}
 
