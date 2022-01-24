@@ -11,7 +11,7 @@ public class SportFootballPageTests extends BaseTest {
         getHomePage().clickOnSectionButtonByIndex(2);
         getSportPage().clickOnSportSectionButtonByIndex(1);
         getSportFootballPage().clickOnFootballSectionsButtonByIndex(1);
-        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchInput());
+        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchField());
         getSportFootballPage().fillSearchInputByChampionship("Scottish Championship");
         getSportFootballPage().waitVisibilityListOfElements(getSportFootballPage().getListOfMonthsYears());
         getSportFootballPage().waitElementToBeClickable(getSportFootballPage().getMonthYearByIndex(11));
@@ -32,7 +32,7 @@ public class SportFootballPageTests extends BaseTest {
         getHomePage().clickOnSectionButtonByIndex(2);
         getSportPage().clickOnSportSectionButtonByIndex(1);
         getSportFootballPage().clickOnFootballSectionsButtonByIndex(1);
-        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchInput());
+        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchField());
         getSportFootballPage().fillSearchInputByChampionship("Scottish Championship");
         getSportFootballPage().waitVisibilityListOfElements(getSportFootballPage().getListOfMonthsYears());
         getSportFootballPage().waitElementToBeClickable(getSportFootballPage().getMonthYearByIndex(0));
@@ -53,7 +53,7 @@ public class SportFootballPageTests extends BaseTest {
         getHomePage().clickOnSectionButtonByIndex(2);
         getSportPage().clickOnSportSectionButtonByIndex(1);
         getSportFootballPage().clickOnFootballSectionsButtonByIndex(1);
-        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchInput());
+        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchField());
         getSportFootballPage().fillSearchInputByChampionship("Euro Under-21 Championship");
         getSportFootballPage().waitVisibilityListOfElements(getSportFootballPage().getListOfMonthsYears());
         getSportFootballPage().waitElementToBeClickable(getSportFootballPage().getMonthYearByIndex(5));
@@ -74,7 +74,7 @@ public class SportFootballPageTests extends BaseTest {
         getHomePage().clickOnSectionButtonByIndex(2);
         getSportPage().clickOnSportSectionButtonByIndex(1);
         getSportFootballPage().clickOnFootballSectionsButtonByIndex(1);
-        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchInput());
+        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchField());
         getSportFootballPage().fillSearchInputByChampionship("Euro Under-21 Championship");
         getSportFootballPage().waitVisibilityListOfElements(getSportFootballPage().getListOfMonthsYears());
         getSportFootballPage().waitElementToBeClickable(getSportFootballPage().getMonthYearByIndex(2));
@@ -95,7 +95,7 @@ public class SportFootballPageTests extends BaseTest {
         getHomePage().clickOnSectionButtonByIndex(2);
         getSportPage().clickOnSportSectionButtonByIndex(1);
         getSportFootballPage().clickOnFootballSectionsButtonByIndex(1);
-        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchInput());
+        getSportPage().waitVisibilityOfElement(getSportFootballPage().getSearchField());
         getSportFootballPage().fillSearchInputByChampionship("Scottish Championship");
         getSportFootballPage().waitVisibilityListOfElements(getSportFootballPage().getListOfMonthsYears());
         getSportFootballPage().waitElementToBeClickable(getSportFootballPage().getMonthYearByIndex(0));
