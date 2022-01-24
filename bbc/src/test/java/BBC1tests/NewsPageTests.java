@@ -8,7 +8,7 @@ import java.util.List;
 
 public class NewsPageTests extends BaseTest {
 
-    private static int INDEX_OF_NEWS_SECTION = 1;
+    private static final int INDEX_OF_NEWS_SECTION = 1;
 
     @Test
     public void checkTheHeadlineArticle(){
