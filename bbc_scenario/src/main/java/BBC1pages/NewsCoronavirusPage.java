@@ -15,16 +15,16 @@ public class NewsCoronavirusPage extends BasePage {
     private WebElement questionsPageButton;
 
     @FindBy(xpath = "//textarea[contains(@placeholder,'answer')]")
-    private WebElement questionInput;
+    private WebElement questionField;
 
     @FindBy(xpath = "//input[@placeholder='Name']")
-    private WebElement nameInput;
+    private WebElement nameField;
 
     @FindBy(xpath = "//input[@placeholder='Email address']")
-    private WebElement emailInput;
+    private WebElement emailField;
 
     @FindBy(xpath = "//input[@placeholder='Contact number']")
-    private WebElement numberInput;
+    private WebElement phoneNumberField;
 
     @FindBy(xpath = "//button[text()='Submit']")
     private WebElement submitButton;
@@ -57,21 +57,21 @@ public class NewsCoronavirusPage extends BasePage {
 
     public boolean isCheckboxSelected(){return checkbox.isSelected();}
 
-    public void fillQuestionField(String questions){ questionInput.sendKeys(questions);}
+    public void fillQuestionField(String questions){ questionField.sendKeys(questions);}
 
-    public WebElement getQuestionInput(){return questionInput;}
+    public WebElement getQuestionField(){return questionField;}
 
-    public void fillNameField(String name){nameInput.sendKeys(name);}
+    public void fillNameField(String name){ nameField.sendKeys(name);}
 
-    public WebElement getNameInput(){return nameInput;}
+    public WebElement getNameField(){return nameField;}
 
-    public void fillNumberField(String phone_number){numberInput.sendKeys(phone_number);}
+    public void fillNumberField(String phone_number){ phoneNumberField.sendKeys(phone_number);}
 
-    public WebElement getNumberInput(){return numberInput;}
+    public WebElement getPhoneNumberField(){return phoneNumberField;}
 
-    public void fillEmailField(String email){emailInput.sendKeys(email);}
+    public void fillEmailField(String email){ emailField.sendKeys(email);}
 
-    public WebElement getEmailInput(){return emailInput;}
+    public WebElement getEmailField(){return emailField;}
 
     public boolean isErrorMessageDisplayed(){return errorMessage.isDisplayed();}
 
