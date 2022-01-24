@@ -12,9 +12,9 @@ public class SportPage extends BasePage {
     public SportPage(WebDriver driver) { super(driver); }
 
     @FindBy(xpath = "//a[contains(@class,'sport-navigation')]")
-    private List<WebElement> listOfSectionSportButton;
+    private List<WebElement> listOfSectionsOfSport;
 
-    public WebElement getSportSectionButtonByIndex(int index){return listOfSectionSportButton.get(index);}
+    public WebElement getSportSectionButtonByIndex(int index){return listOfSectionsOfSport.get(index);}
 
     public void clickOnSportSectionButtonByIndex(int index){getSportSectionButtonByIndex(index).click();}
 }
