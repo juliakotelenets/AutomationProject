@@ -13,9 +13,9 @@ public class HomePage extends BasePage{
     }
 
     @FindBy(xpath = "//div[contains(@class,'section')]//li[contains(@class,'orb-nav')]//a")
-    private List<WebElement> listOfSectionButton;
+    private List<WebElement> listOfSectionsButton;
 
-    public WebElement getSectionButtonByIndex(int index){return listOfSectionButton.get(index);}
+    public WebElement getSectionButtonByIndex(int index){return listOfSectionsButton.get(index);}
 
     public void clickOnSectionButtonByIndex(int index){getSectionButtonByIndex(index).click();}
 }
