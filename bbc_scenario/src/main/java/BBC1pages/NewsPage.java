@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class NewsPage extends BasePage {
 
@@ -15,36 +15,42 @@ public class NewsPage extends BasePage {
     }
 
     @FindBy(xpath = "//ul[contains(@class,'sections')]//li[contains(@class,'menuitem-container')]")
-    private List<WebElement> listOfNewsSectionsButton;
+    private List<WebElement> listOfNewsSectionsButtons;
 
     @FindBy(xpath = "//div[contains(@class,'primary__story')]//h3")
     private WebElement headlineOfNews;
 
     @FindBy(xpath = "//div[@class='gel-wrap gs-u-pt+']//h3[contains(@class,'gel-pica-bold')]")
-    private List<WebElement> articlesOfNews;
+    private List<WebElement> listOfArticlesOfNews;
 
     @FindBy(xpath = "//input[contains(@id,'search')]")
-    private WebElement searchInputString;
+    private WebElement searchInputField;
 
     @FindBy(xpath = "//a[contains(@class,'section-link')]//span")
-    private List<WebElement> listOfSectionTitle;
+    private List<WebElement> listOfSectionsTitle;
 
-    public WebElement getSectionByIndex(int index){return listOfSectionTitle.get(index);}
+    public WebElement getSectionByIndex(int index){return listOfSectionsTitle.get(index);}
 
     public String getTextOfSectionByIndex(int index){return getSectionByIndex(index).getText();}
 
-    public WebElement getNewsSectionButtonByIndex(int index){return listOfNewsSectionsButton.get(index);}
+    public WebElement getNewsSectionButtonByIndex(int index){return listOfNewsSectionsButtons.get(index);}
 
     public void clickOnNewsSectionButtonByIndex(int index){getNewsSectionButtonByIndex(index).click();}
 
-    public void fillSearchInput(String text){searchInputString.sendKeys(text, Keys.ENTER);}
+    public void fillSearchInput(String text){ searchInputField.sendKeys(text, Keys.ENTER);}
 
     public String getTheTextOfHeadline(){return headlineOfNews.getText(); }
 
-    public List<WebElement> getTheArticles(){return articlesOfNews;}
+    public List<WebElement> getTheArticles(){return listOfArticlesOfNews;}
 
     public List<String> getTheTextOfArticles(){
-        return getTheArticles().stream().filter(WebElement::isDisplayed).map(WebElement::getText).collect(
-                Collectors.toList());
+        List<String> list = new ArrayList<>();
+        for (WebElement webElement : getTheArticles()) {
+            if (webElement.isDisplayed()) {
+                String text = webElement.getText();
+                list.add(text);
+            }
+        }
+        return list;
     }
 }
