@@ -109,6 +109,8 @@ public class DefinitionSteps {
 
     @And("User clicks on questions form")
     public void userClicksOnQuestionsForm(){
+        newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getClosePopupButton());
+        newsCoronavirusPage.clickOnClosePopupButton();
         newsCoronavirusPage.waitVisibilityOfElement(newsCoronavirusPage.getQuestionsPageButton());
         newsCoronavirusPage.clickToQuestionsButton();
     }
