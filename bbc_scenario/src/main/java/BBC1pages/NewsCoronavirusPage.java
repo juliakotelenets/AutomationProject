@@ -6,7 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class NewsCoronavirusPage extends BasePage {
 
-    public NewsCoronavirusPage(WebDriver driver) { super(driver); }
+    public NewsCoronavirusPage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(xpath = "//li[contains(@class,'secondary-menuitem-container')]")
     private WebElement coronavirusStoryButton;
@@ -35,45 +37,90 @@ public class NewsCoronavirusPage extends BasePage {
     @FindBy(xpath = "//div[@class='input-error-message']")
     private WebElement errorMessage;
 
-    public void clickToCoronavirusStory(){
+    @FindBy(xpath = "//button[@aria-label='Close']")
+    private WebElement closePopupButton;
+
+    public WebElement getClosePopupButton() {
+        return closePopupButton;
+    }
+
+    public void clickOnClosePopupButton() {
+        closePopupButton.click();
+    }
+
+    public void clickToCoronavirusStory() {
         coronavirusStoryButton.click();
     }
 
-    public WebElement getCoronavirusStoryButton(){return coronavirusStoryButton;}
+    public WebElement getCoronavirusStoryButton() {
+        return coronavirusStoryButton;
+    }
 
-    public void clickToQuestionsButton(){
+    public void clickToQuestionsButton() {
         questionsPageButton.click();
     }
 
-    public WebElement getQuestionsPageButton(){return questionsPageButton;}
+    public WebElement getQuestionsPageButton() {
+        return questionsPageButton;
+    }
 
-    public void clickToCheckbox() { checkbox.click(); }
+    public void clickToCheckbox() {
+        checkbox.click();
+    }
 
-    public WebElement getCheckbox(){return checkbox;}
+    public WebElement getCheckbox() {
+        return checkbox;
+    }
 
-    public void clickToSubmitButton() { submitButton.click(); }
+    public void clickToSubmitButton() {
+        submitButton.click();
+    }
 
-    public WebElement getSubmitButton(){return submitButton;}
+    public WebElement getSubmitButton() {
+        return submitButton;
+    }
 
-    public boolean isCheckboxSelected(){return checkbox.isSelected();}
+    public boolean isCheckboxSelected() {
+        return checkbox.isSelected();
+    }
 
-    public void fillQuestionField(String questions){ questionField.sendKeys(questions);}
+    public void fillQuestionField(String questions) {
+        questionField.sendKeys(questions);
+    }
 
-    public WebElement getQuestionField(){return questionField;}
+    public WebElement getQuestionField() {
+        return questionField;
+    }
 
-    public void fillNameField(String name){ nameField.sendKeys(name);}
+    public void fillNameField(String name) {
+        nameField.sendKeys(name);
+    }
 
-    public WebElement getNameField(){return nameField;}
+    public WebElement getNameField() {
+        return nameField;
+    }
 
-    public void fillNumberField(String phone_number){ phoneNumberField.sendKeys(phone_number);}
+    public void fillNumberField(String phone_number) {
+        phoneNumberField.sendKeys(phone_number);
+    }
 
-    public WebElement getPhoneNumberField(){return phoneNumberField;}
+    public WebElement getPhoneNumberField() {
+        return phoneNumberField;
+    }
 
-    public void fillEmailField(String email){ emailField.sendKeys(email);}
+    public void fillEmailField(String email) {
+        emailField.sendKeys(email);
+    }
 
-    public WebElement getEmailField(){return emailField;}
+    public WebElement getEmailField() {
+        return emailField;
+    }
 
-    public boolean isErrorMessageDisplayed(){return errorMessage.isDisplayed();}
+    public boolean isErrorMessageDisplayed() {
+        return errorMessage.isDisplayed();
+    }
 
-    public WebElement getErrorMessage(){return errorMessage;}
+    public WebElement getErrorMessage() {
+        return errorMessage;
+    }
 }
